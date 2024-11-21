@@ -1,0 +1,11 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# Redirect to the clean URL (without index.php)
+RewriteCond %{THE_REQUEST} \s/index\.php [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Redirect example.com/page.php to example.com/page
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]

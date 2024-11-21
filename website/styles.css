@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #d3d3d3;
+}
+
+
+/*navbar related styles*/
+nav {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #323b4c;
+    padding: 0 2%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 60px;
+    max-height: 60px;
+    max-width: 100%;
+    display: block;
+}
+
+.navbar-button-element {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    height: 60px;
+    max-height: 60px;
+    max-width: 100%;
+    line-height: 60px;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0); /*transparancy*/
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #d3d3d3;
+    padding: 0 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+#navbar-notif-button img {
+    max-height: 25px;
+}
+
+.navbar-button-element p {
+    margin: 10px;
+}
+
+.navbar-button-element:hover {
+    text-decoration: underline;
+    background-color: #232224;
+}
+
+/*general popup related styles*/
+
+.popup-info-element {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #d0d0d0;
+    font-size: small;
+    text-decoration: none;
+}
+
+.popup-deploy-element {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.popup-deploy-element.active {
+    height: 50px;
+}
+
+.popup-valid-element {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #40c040;
+    font-size: small;
+    text-decoration: none;
+}
+
+.popup-alert-element {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #ff4040;
+    font-size: small;
+    text-decoration: none;
+}
+
+/*user sign menu related styles*/
+#user-sign-in-menu,
+#user-sign-up-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#user-sign-in-menu.active,
+#user-sign-up-menu.active {
+    display: flex;
+}
+
+#user-sign-in-popup,
+#user-sign-up-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    padding-bottom: 30px;
+    width: 500px;
+    font-size: 17px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #323b4c;
+    border-radius: 20px;
+    border: 2px solid white;
+    z-index: 1;
+    transition: height 0.2s ease;
+}
+
+.user-sign-title-element {
+    width: auto;
+    text-align: center;
+    margin-bottom: 45px;
+    font-weight: bold; 
+}
+
+.user-sign-field-element {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    padding : 5px;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.user-sign-field-element input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 2px solid #d3d3d3;
+    background-color: #323b4c;
+    color: white;
+    border-radius: 4px;
+}
+
+.user-sign-field-element label {
+    position: absolute;
+    top: 42px;
+    left: 20px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: 10px;
+    left: 20px;
+    font-size: 12px;
+    color: #909090;
+}
+
+#user-sign-in-forgot-password-button {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #d0d0d0;
+    font-size: small;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#user-sign-in-forgot-password-button:hover {
+    color: white;
+}
+
+#user-sign-in-log-in-button,
+#user-sign-up-register-button {
+    display: block;
+    margin-top: 20px;
+    justify-self: center;
+    color: white;
+    border: 2px solid #d3d3d3;
+    font-size: normal;
+    font-weight: bold;
+    background-color: rgba(47,113,161, 0.5);
+    height: 40px;
+    width: 120px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#user-sign-in-log-in-button:hover,
+#user-sign-up-register-button:hover {
+    background-color: rgba(47,113,161, 1);
+    cursor: pointer;
+}
+
+#user-sign-in-no-account-button,
+#user-sign-up-already-have-account-button {
+    justify-self: center;
+    margin-top: 10px;
+    font-weight: normal;
+    color: #d3d3d3;
+}
+
+#user-sign-in-no-account-button button,
+#user-sign-up-already-have-account-button  button{
+    background-color: transparent;
+    color: #d3d3d3;
+    border: 0;
+    font-size: 17px;
+}
+
+#user-sign-in-no-account-button button:hover,
+#user-sign-up-already-have-account-button button:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
+/*footer related code*/
+.footer-items {
+    background-color: #323b4c;
+    color: #d3d3d3;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
