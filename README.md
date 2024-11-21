@@ -1,5 +1,6 @@
 # Neirlink Website Project
 Work in progress — by @shiramatsura.
+**All rights reserved.**
 
 This project is a platform designed to share and showcase **artworks, games, fictions, videos**, and more — a mix between **NewGrounds.com** and **itch.io**. The goal is to provide creators with a space to easily upload and display their creations.
 
@@ -36,5 +37,3 @@ The domain name is **neirlink.com**. My Apache configuration encrypts HTTP for b
 ### File Structure (WIP):
 The file structure is still a work in progress. I plan to separate user-created pages from the main website and assign them their own subdomains.  
 Likewise, files uploaded by users will be handled as private resources, ensuring that users cannot access each other's files.
-
-**All rights reserved.**
